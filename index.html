@@ -31,7 +31,7 @@
 
             </div>
             <div class="info">
-                <form onsubmit="sendEmail(); reset(); return false">
+                <form onsubmit="sendEmail(); reset(); return false;">
                 <div class="ind">
                         <label for="username"><b>Full Name:</b></label><br>
                         <input type="text" id="username" name="username" required>
@@ -79,8 +79,8 @@
     <script>
         function sendEmail() {
             Email.send({
-                SecureToken : " 7959c553-8c54-4ffb-af81-0e15618aabca",
-                To: 'shreyasrivastava639@gmail.com',
+                SecureToken : "7959c553-8c54-4ffb-af81-0e15618aabca",
+                To: "shreyasrivastava639@gmail.com",
                 From: document.getElementById("mail").value,
                 Subject: "New Contact Form Registered",
                 Body: "Name: "+ document.getElementById("username").value
