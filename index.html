@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This contact form is basically designed for better interaction with the audience.">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="icon" href="png-transparent-computer-icons-contact-page-marketing-miscellaneous-blue-logo-thumbnail-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="mySidenav" class="sidenav"> Socials:
+            <div class="socials"><a href="#" id="about"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="socials"><a href="#" id="about"><i class="fa-brands fa-facebook"></i></a></div>
+            <div class="socials"><a href="#" id="about"><i class="fa-brands fa-linkedin"></i></a></div>
+         </div>
+    </header>
+    <div class="container">
+        <div class="box1">
+            <div class="head">
+                <h1>Let's Connect</h1>
+                <p>
+                    <div class="det">
+                    <div class="phone"><i class="fa-solid fa-phone"></i>+91800XXXXXXX</div>
+                    <div class="phone"><i class="fa-solid fa-envelope"></i>xyz@gmail.com</div>
+                </div>
+                </p>
+
+            </div>
+            <div class="info">
+                <form onsubmit="sendEmail(); reset(); return false">
+                <div class="ind">
+                        <label for="username"><b>Full Name:</b></label><br>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="ind">
+                        <label for="email"><b>Email Address:</b></label><br>
+                        <input type="email" id="mail" name="mail" required>
+                    </div>
+                                <div class="ind">
+                    <label for="sub"><b>Phone:</b></label><br>
+                    <input type="tel" id="ph" name="ph" required>
+                </div>
+                <div class="ind">
+                    <label for="message"><b>Message:</b></label><br>
+                    <textarea id="issue" name="issue" columns="30" rows="5" required></textarea>
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+                                       <div class="details">
+                        <details>
+                            <summary><b>Details</b></summary>
+                            <p>This form is designed for better interaction with the audience.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                   </div>
+        <div class="box2">
+            <nav>
+                <ul>
+                 <li class="dropdown">
+                    <a href="#" class="dropbtn">Socials</a>
+                    <div class="dropdown-content">
+                      <a href="#">Instagram</a>
+                      <a href="#">Facebook</a>
+                      <a href="#">LinkedIn</a>
+                    </div>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script src= "https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+                To: 'shreyasrivastava639@gmail.com',
+                From: document.getElementById("mail").value,
+                Subject: "New Contact Form Registered",
+                Body: "Name: "+ document.getElementById("username").value
+                       +"<br>Email: "+ document.getElementById("mail").value
+                       +"<br>Phone: "+ document.getElementById("ph").value
+                       +"<br>Message: "+ document.getElementById("issue").value
+            }).then(
+                message => alert("Form was submitted successfully")
+            );
+        }    
+    </script>
+</body>
+</html>
