@@ -194,3 +194,8 @@ width:40vw;
         width:70vw;
     }
 }
+@media screen and (max-width:330px){
+    .details{
+        width:80vw;
+    }
+    }
